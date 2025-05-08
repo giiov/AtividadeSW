@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo Básico de JavaScript</title>
+</head>
+<body>
+  <h1>Bem-vindo ao meu site!</h1>
+  <p>Digite seu nome:</p>
+  <input type="text" id="nomeUsuario" placeholder="Seu nome">
+  <button onclick="dizerOla()">Dizer Olá</button>
+  
+  <p id="mensagem"></p>
+
+  <script>
+    function dizerOla() {
+      const nome = document.getElementById('nomeUsuario').value;
+      const mensagem = document.getElementById('mensagem');
+      if (nome.trim() !== "") {
+        mensagem.textContent = `Olá, ${nome}! Seja bem-vindo.`;
+      } else {
+        mensagem.textContent = "Por favor, digite seu nome.";
+      }
+    }
+  </script>
+</body>
+</html>
